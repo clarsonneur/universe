@@ -372,7 +372,7 @@ Docker image" status report to view the build results.
 
 1. Validate and build the Universe artifacts
   ```bash
-  scripts/build.sh
+  (cd docker/build && bin/build.sh) && docker run -it --rm -v $(pwd):/src universe-build:test scripts/build.sh
   ```
 
 2. Build the Universe Server Docker image
